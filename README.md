@@ -1,4 +1,4 @@
-# BeatMaker
+# BeatStudio
 
 Designed and Created the BeatStudio app using Vanilla JS, Html and CSS.
 
