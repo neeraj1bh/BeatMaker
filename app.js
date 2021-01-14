@@ -19,10 +19,10 @@ class DrumKit {
     this.classList.toggle("active");
   }
   repeat() {
-    let step = this.index % 33;
+    let step = this.index % 32;
     const activeBars = document.querySelectorAll(`.b${step}`);
     //Loop over the pads
-    activeBars.forEach(bar => {
+    activeBars.forEach((bar) => {
       bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
       if (bar.classList.contains("active")) {
         if (bar.classList.contains("kick-pad")) {
@@ -48,7 +48,7 @@ class DrumKit {
     if (this.isPlaying) {
       //Clear the interval
       clearInterval(this.isPlaying);
-      console.log(this.isPlaying);
+      //   console.log(this.isPlaying);
       this.isPlaying = null;
     } else {
       this.isPlaying = setInterval(() => {
@@ -131,32 +131,32 @@ const drumKit = new DrumKit();
 
 //Event Listeners
 
-drumKit.pads.forEach(pad => {
+drumKit.pads.forEach((pad) => {
   pad.addEventListener("click", drumKit.activePad);
-  pad.addEventListener("animationend", function() {
+  pad.addEventListener("animationend", function () {
     this.style.animation = "";
   });
 });
 
-drumKit.playBtn.addEventListener("click", function() {
+drumKit.playBtn.addEventListener("click", function () {
   drumKit.updateBtn();
   drumKit.start();
 });
 
-drumKit.selects.forEach(select => {
-  select.addEventListener("change", function(e) {
+drumKit.selects.forEach((select) => {
+  select.addEventListener("change", function (e) {
     drumKit.changeSound(e);
   });
 });
-drumKit.muteBtns.forEach(btn => {
-  btn.addEventListener("click", function(e) {
+drumKit.muteBtns.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
     drumKit.mute(e);
   });
 });
 
-drumKit.tempoSlider.addEventListener("input", function(e) {
+drumKit.tempoSlider.addEventListener("input", function (e) {
   drumKit.changeTempo(e);
 });
-drumKit.tempoSlider.addEventListener("change", function(e) {
+drumKit.tempoSlider.addEventListener("change", function (e) {
   drumKit.updateTempo(e);
 });
