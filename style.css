@@ -14,7 +14,18 @@
 }
 
 body {
-  background: rgb(236, 235, 235);
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   min-height: 100vh;
@@ -28,16 +39,14 @@ svg {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  min-height: 25vh;
+  justify-content: space-around;
+  min-height: 20vh;
 }
 
 a {
   text-decoration: none;
   color: black;
 }
-
-
 
 #logo1 {
   font-family: "AIR";
@@ -126,7 +135,7 @@ a {
 }
 
 .play {
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   background: black;
   color: white;
   border-color: black;
@@ -137,7 +146,7 @@ a {
   text-transform: uppercase;
   font-style: normal;
   font-family: "Source Code Pro", monospace;
-  margin: 4rem 0rem 2rem 0rem;
+  /* margin: 4rem 0rem 2rem 0rem; */
 }
 
 .play:hover {
@@ -222,6 +231,11 @@ select {
     margin-top: 3rem;
     width: 50%;
   }
+}
+
+.controls h1 {
+  color: #fff;
+
 }
 
 @media screen and (max-width: 468px) {
