@@ -22,7 +22,6 @@
   <body>
     <div class="container">
       <h2><a id="logo1" href="./index.html">BeatStudio</a></h2>
-      <p>Tempo - <span class="tempo-nr">150</span></p>
       <button class="play">Play</button>
     </div>
     <div class="sequencer">
@@ -178,14 +177,16 @@
           <div class="pad hihat-pad b32"></div>
         </div>
       </div>
+
       <div class="tempo">
         <input
           type="range"
           class="tempo-slider"
           max="300"
-          min="20"
+          min="0"
           value="150"
         />
+        <p>Tempo - <span class="tempo-nr">150</span></p>
       </div>
     </div>
 
