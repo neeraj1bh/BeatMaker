@@ -40,7 +40,6 @@ svg {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  min-height: 20vh;
 }
 
 a {
@@ -59,7 +58,7 @@ a {
 .kick-pad,
 .snare-pad,
 .hihat-pad {
-  width: 1rem;
+  width: 0.5rem;
   height: 5rem;
   margin: 0.5rem 0.5rem;
   cursor: pointer;
@@ -85,7 +84,7 @@ a {
 
 .sequencer {
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -158,8 +157,10 @@ select {
   min-width: 150px;
   width: auto;
   padding: 0.7rem;
-  border-radius: 0rem;
+  border-radius: 0.5rem;
+  background-color: rgb(15, 15, 15);
   font-size: 1rem;
+  color: white;
 }
 
 .mute.active {
@@ -188,7 +189,7 @@ select {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: black;
+  background: rgb(5, 5, 5);
   cursor: pointer;
 }
 
@@ -196,11 +197,12 @@ select {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: black;
+  background: rgb(5, 5, 5);
+
   cursor: pointer;
 }
 
-.tempo p {
+.container p {
   font-size: 1.5rem;
   margin: 2rem;
   text-align: center;
@@ -208,6 +210,7 @@ select {
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
+  color: #fff;
 }
 
 @keyframes playTrack {
@@ -235,7 +238,6 @@ select {
 
 .controls h1 {
   color: #fff;
-
 }
 
 @media screen and (max-width: 468px) {
